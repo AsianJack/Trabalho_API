@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetroNaka</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/home.css" />
+    <script src="../../javascripts/geralFunctions.js"></script>
+</head>
+
+<body>
+    <header class="CabecalhoHome">
+        <div class="Logo">
+            <img class="logo" src="../images/PetroNaka1.png" alt="...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/clientes/conta">Perfil</a></li>
+                <li><a href="/telapedidos">Pedidos</a></li>
+                <li><a href="/telaprodutos">Produtos</a></li>
+                <li><a class="logout-a" href="#" onclick="logout()">Sair</a></li>
+                <li><a href="#" onclick="acessos()">Acessos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="linha-amarela"></div>
+    <main class="MainHome">
+        <div class="LogoFooter">
+            <img class="logoFooter" src="../images/fundoPetroNaka.png" alt="...">
+        </div>
+    </main>
+
+    <footer>
+        <div></div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const perfilLi = document.getElementById("perfil");
+            perfilLi.addEventListener("click", (event) => {
+                event.preventDefault();
+                window.location.href = "/clientes/editarCliente";
+            });
+        });
+    </script>
+</body>
+
+</html>

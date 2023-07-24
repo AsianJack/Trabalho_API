@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetroNaka</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../../stylesheets/novoPedido.css" />
+    <script src="../../javascripts/geralFunctions.js"></script>
+    <script src="../../javascripts/editarpedidoFunctions.js"></script>
+</head>
+
+<body>
+    <header class="CabecalhoHome">
+        <div class="Logo">
+            <img class="logo" src="../../images/PetroNaka1.png" alt="...">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="home()">Home</a></li>
+                <li><a href="/telapedidos">Pedidos</a></li>
+                <li><a href="/telaprodutos">Produtos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="linha-amarela"></div>
+
+    <main class="MainLogin">
+        <div class="container">
+            <h2>Editar Pedido</h2>
+            <div class="form-group">
+                <label for="usina">ID:</label>
+                <input type="text" id="id" name="id" value="{{_id}}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="usina">Nome da Usina:</label>
+                <input type="text" id="usina" name="usina" value="{{usina}}" required>
+            </div>
+            <div class="form-group">
+                <label for="produto">Produto:</label>
+                <select id="produto" name="produto" required>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="quantidade">Quantidade:</label>
+                <input type="text" id="quantidade" name="quantidade" value="{{quantidade}}" required>
+            </div>
+            <div class="form-group">
+                <label for="preco">Preço:</label>
+                <input type="text" id="preco" name="preco" value="{{preco}}" required>
+            </div>
+            <div class="form-group">
+                <label for="destino">Destino:</label>
+                <input type="text" id="destino" name="destino" value="{{destino}}" required>
+            </div>
+
+            <label for="error" id="error" class="errado"></label>
+
+            <div class="form-group">
+                <button type="submit" onclick="cadastrar()">Salvar alterações</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div></div>
+    </footer>
+
+</body>
+
+</html>
